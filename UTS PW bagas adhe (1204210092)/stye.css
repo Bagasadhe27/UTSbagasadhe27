@@ -1,0 +1,343 @@
+/* HEADER */
+/* bagian header, tinggi border ukuran 70px */
+header {
+	height:70px; 
+}
+/* display saya gunakan inlineblock, dan untuk padding atas bawah saya gunakan 15px dan kiri kanan 24px */
+header h1 {
+	display: inline-block;
+	padding:15px 24px;
+	text-transform: uppercase;
+}
+header h1 a {
+	transition: .3s;
+}
+header h1 a:hover {
+	color: grey;
+}
+/* untuk memposisikan header ul ke kanan */
+header ul {
+	float: right;
+}
+/* untuk padding saya gunakan kiri kanan dan atas bawah 24px, dan saya gunakan diplay inlineblock untuk tampilan agar horizontal */
+header ul li {
+	padding:22px;
+	display: inline-block;
+	border-bottom: grey solid;
+}
+header ul li a {
+	transition: .3s;
+}
+header ul li a:hover {
+	color: #F84744;
+	background-color: grey;
+}
+.active {
+	background-color: grey;
+	color: #F84744;
+	border-bottom: #333 solid;
+}
+a {
+	text-decoration: none;
+}
+/* dicontainer ini saya menggunakan lebar 90% dan margin atas bawah 0 dan kiri kanan auto */
+.container {
+	width:90%;
+	margin:0 auto;
+}
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+/* mobile menu saya posisikan di kanan,dan display saya hilangkan untuk mode dekstop, lalu saya tambahkan padding kirikanan atasbawah 18px */
+.mobile-menu {
+	float: right;
+	display: none;
+	padding:18px;
+}
+.mobile-menu:hover {
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+/* posisi saya gunakan fixed, top dan bottom 0 krn mepet, left -300px agar hilang ketika mode dekstop dan lebar 300px */
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width:300px;
+	background-color: rgba(65, 75, 85, 0.9);
+	transition: .3s;
+}
+.sidebar ul li a {
+	color: #fff;
+}
+.sidebar ul li {
+	padding:24px;
+	transition: .3s;
+	transition-property: background-color;
+}
+.sidebar ul li:hover {
+	background-color: grey;
+}
+/* saat id di check maka semua element sidebar akan muncul */
+#check:checked ~ .sidebar {
+	left: 0;
+}
+/* END HEADER */
+
+
+
+
+
+/* BANNER */
+.banner {
+	background-image: url("image/bg.jpeg");
+	height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+	padding:150px 0;
+}
+/* di bagian sction ini saya kasi pading untuk mengatur atasbawah 50px dan kirikanan 0  */
+section {
+	padding:50px 0;
+}
+/* dibagian sini saya gunakan width 100px,dan ukuran border 10x, serta warna box shadow */
+.banner img {
+	width: 100px;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px #ddd;
+	margin-bottom: 10px;
+}
+.banner h2,
+.banner p,
+.banner span {
+	color: #fff;
+}
+/* jarak h2 ke p saya kasih margin bottom 10px */
+.banner h2 {
+	margin-bottom: 10px;
+}
+.banner p {
+	font-size: 18px;
+}
+.banner-left {
+	padding-left:24px;
+}
+/* END BANNER */
+
+
+
+
+/* garis judul */
+hr {
+	width: 20%;
+	margin: auto;
+	margin-top: -20px;
+	margin-bottom: 5%;
+	border: solid grey;
+}
+section h3 {
+	padding-bottom: 20px;
+	text-align: center;
+	margin:20px;
+	position: relative;
+}
+/* end garis judul */
+
+
+
+/* ABOUT */
+#about p {
+	text-align: justify;
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+/* END ABOUT */
+
+
+
+/* CONTACT */
+#contact {
+	background-color: #f9f9f9;
+	display: flex;
+	flex-direction: column;	
+}
+.kon {
+	width:33.33%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	padding:50px 10px;
+}
+.kon h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	width: 50%;
+	margin-top: 3%;
+	margin-bottom: 10%;
+}
+.input-form {
+	background-color: #ddd;
+	border: 20px #333 solid;
+}
+.Btn {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	margin-top: 2%;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	padding: 1%;
+	border-radius: 20px;
+	background-image: linear-gradient(to right, white, grey, black);
+	transition: background-position 1s;
+	background-position: left;
+}
+.Btn:hover {
+	background-position: right;
+	background-size: 500px;
+}
+/* END CONTACT */
+
+
+
+
+/* SKILLS */
+.slideshow img {
+	width: 50%;	
+}
+#skills .bar {
+	height: 30px;
+	background-color: #fff;
+	border:1px solid #ddd;
+	margin: 5px 0 20px 0;
+}
+.bar .nilai {
+	height:30px;
+	background-color: grey;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+}
+.html {
+	width:40%;
+}
+.css {
+	width:30%;
+}
+.js {
+	width:20%;
+}
+.premier {
+	width:75%;
+}
+.ps {
+	width:85%;
+}
+/* END SKILLS */
+
+
+
+
+/* PORTOFOLIO */
+.porto {
+	width:25%;
+	box-sizing: border-box;
+	padding:5px;
+	float: left;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.porto img {
+	width:100%;
+}
+.porto a:hover img {
+	transform: scale(1.2);
+}
+/* END PORTO */
+
+
+
+
+/* FOOTER */
+footer {
+	background-color: #333;
+	padding:50px;
+	text-align: center;
+	color: #fff;
+}
+footer small {
+	color: #fff;
+}
+footer small a {
+	color: #fff;
+}
+/* END FOOTER */
+
+
+
+
+/* EFEK SMOOTH SCROL TO TOP */
+html {
+	scroll-behavior: smooth;
+}
+/* END SMOOTH */
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+	/* untuk menampilakan mobile menu ketika responsive atau ukuran 768px */
+	.mobile-menu {
+		display: block;
+	}
+	/* untuk menghilangkan header ul ketika responsive atau di ukuran 768px */
+	header ul {
+		display: none;
+	}
+	.porto {
+		width:50%;	
+	}
+	.kon {
+		width:100%;
+	}
+	.table-container {
+		width: 100%;
+	}
+	th {
+		display: none;
+	}
+	td {
+		display: block;
+		text-align: right;
+		border-right: 1px solid;
+	}
+	td::before{
+		float: left;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.slideshow img {
+		width: 100% !important;
+	}
+	.vidio iframe{
+		width: 80% !important;
+	}
+}
+/* END RESPONSIVE */
